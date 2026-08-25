@@ -80,7 +80,7 @@ TEST_F(ConfigSchemaTest, EachConfigVariableIsLoadedOnce) {
                     configVariableIndexes.insert(configVariableIndex);
                 }));
             valueSetter(bool{}); 
-        });
+        }));
 
     EXPECT_CALL(mockConfigConversion, uint(testing::_, testing::_, testing::_))
         .WillRepeatedly(testing::WithArg<1>([this](auto valueSetter) {
